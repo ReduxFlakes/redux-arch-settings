@@ -1,6 +1,6 @@
 # Disables power saving capabilities for `snd-hda-intel` when device is connected to AC.
 # Prevents audio cracks on some hardware. The saved value is stashed in /run and restored
-# when the machine switches back to battery. See `usr/lib/audio-pm-ctl`.
+# when the machine switches back to battery. See `usr/lib/udev/audio-pm-ctl`.
 
 ACTION=="add", SUBSYSTEM=="sound", KERNEL=="card*", DRIVERS=="snd_hda_intel", TEST!="/run/udev/snd-hda-intel-powersave", \
     RUN+="/usr/lib/udev/audio-pm-ctl init"
