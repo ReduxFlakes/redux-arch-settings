@@ -39,6 +39,13 @@ Configurations for temporary file cleanup and Transparent Huge Page (THP) behavi
 ### Network & Modules
 * **NetworkManager DNS**: Uses `systemd-resolved` for DNS resolution.
 * **NTSync Module**: Loads the `ntsync` kernel module at boot.
+* **NetworkManager Wi-Fi Power Save**: Disables Wi-Fi power saving for all connections to reduce latency and packet loss.
 
 ### Audio & Debugging
 * **Realtime Audio Priority**: Grants the `@audio` group `rtprio 99` via `/etc/security/limits.d`.
+
+## Resources & Credits
+
+- [CachyOS-Settings](https://github.com/CachyOS/CachyOS-Settings)
+- [Improving performance - Arch Linux wiki](https://wiki.archlinux.org/title/Improving_performance)
+- [Lower WiFi latency - Fedora Discussion](https://discussion.fedoraproject.org/t/tip-lower-wifi-latency-by-disabling-wifi-power-management/)
